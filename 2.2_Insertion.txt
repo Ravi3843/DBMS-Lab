@@ -1,0 +1,106 @@
+INSERT INTO Bank (bk_code, bk_name, bk_address) VALUES
+('BK01', 'State Bank', 'MG Road');
+
+INSERT INTO Bank (bk_code, bk_name, bk_address) VALUES
+('BK02', 'HDFC Bank', 'Brigade Road');
+
+INSERT INTO Bank (bk_code, bk_name, bk_address) VALUES
+('BK03', 'ICICI Bank', 'Electronic City');
+
+INSERT INTO Bank (bk_code, bk_name, bk_address) VALUES
+('BK04', 'Axis Bank', 'Whitefield');
+
+INSERT INTO Bank (bk_code, bk_name, bk_address) VALUES
+('BK05', 'Canara Bank', 'Jayanagar');
+
+INSERT INTO Branch (br_id, br_name, br_address, bk_code) VALUES
+('BR01', 'MG Road Branch', 'MG Road', 'BK01');
+
+INSERT INTO Branch (br_id, br_name, br_address, bk_code) VALUES
+('BR02', 'Brigade Branch', 'Brigade Road', 'BK02');
+
+INSERT INTO Branch (br_id, br_name, br_address, bk_code) VALUES
+('BR03', 'Electronic Branch', 'Electronic City', 'BK03');
+
+INSERT INTO Branch (br_id, br_name, br_address, bk_code) VALUES
+('BR04', 'Whitefield Branch', 'Whitefield', 'BK04');
+
+INSERT INTO Branch (br_id, br_name, br_address, bk_code) VALUES
+('BR05', 'Jayanagar Branch', 'Jayanagar', 'BK05');
+
+INSERT INTO Customer (cust_ID, cust_name, phone_no, address) VALUES
+(101, 'Ravi', '9876543210', 'Bangalore');
+
+INSERT INTO Customer (cust_ID, cust_name, phone_no, address) VALUES
+(102, 'Anita', '8765432109', 'Mangalore');
+
+INSERT INTO Customer (cust_ID, cust_name, phone_no, address) VALUES
+(103, 'Suresh', '7654321098', 'Surathkal');
+
+INSERT INTO Customer (cust_ID, cust_name, phone_no, address) VALUES
+(104, 'Kiran', '6543210987', 'Udupi');
+
+INSERT INTO Customer (cust_ID, cust_name, phone_no, address) VALUES
+(105, 'Neha', '5432109876', 'Delhi');
+
+INSERT INTO Account (acc_no, acc_type, balance, br_id) VALUES
+(2001, 'savings', 15000, 'BR01');
+
+INSERT INTO Account (acc_no, acc_type, balance, br_id) VALUES
+(2002, 'current', 5000, 'BR02');
+
+INSERT INTO Account (acc_no, acc_type, balance, br_id) VALUES
+(2003, 'savings', 12000, 'BR03');
+
+INSERT INTO Account (acc_no, acc_type, balance, br_id) VALUES
+(2004, 'current', 8000, 'BR04');
+
+INSERT INTO Account (acc_no, acc_type, balance, br_id) VALUES
+(2005, 'savings', 3000, 'BR05');
+
+INSERT INTO Customer_Account (cust_ID, acc_no) VALUES
+(101, 2001);
+
+INSERT INTO Customer_Account (cust_ID, acc_no) VALUES
+(102, 2002);
+
+INSERT INTO Customer_Account (cust_ID, acc_no) VALUES
+(103, 2003);
+
+INSERT INTO Customer_Account (cust_ID, acc_no) VALUES
+(104, 2004);
+
+INSERT INTO Customer_Account (cust_ID, acc_no) VALUES
+(105, 2005);
+
+INSERT INTO Loan (loan_ID, loan_type, amount, br_id) VALUES
+(3001, 'home', 500000, 'BR01');
+
+INSERT INTO Loan (loan_ID, loan_type, amount, br_id) VALUES
+(3002, 'vehicle', 200000, 'BR02');
+
+INSERT INTO Loan (loan_ID, loan_type, amount, br_id) VALUES
+(3003, 'personal', 100000, 'BR03');
+
+INSERT INTO Loan (loan_ID, loan_type, amount, br_id) VALUES
+(3004, 'education', 300000, 'BR04');
+
+INSERT INTO Loan (loan_ID, loan_type, amount, br_id) VALUES
+(3005, 'home', 600000, 'BR05');
+
+INSERT INTO Customer_Loan (cust_ID, loan_ID) VALUES
+(101, 3001);
+
+INSERT INTO Customer_Loan (cust_ID, loan_ID) VALUES
+(102, 3002);
+
+INSERT INTO Customer_Loan (cust_ID, loan_ID) VALUES
+(103, 3003);
+
+INSERT INTO Customer_Loan (cust_ID, loan_ID) VALUES
+(104, 3004);
+
+INSERT INTO Customer_Loan (cust_ID, loan_ID) VALUES
+(105, 3005);
+
+COMMIT;
