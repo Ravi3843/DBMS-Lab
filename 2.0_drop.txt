@@ -1,8 +1,0 @@
-drop table Customer_Loan;
-drop table Loan;
-drop table Customer_Account;
-drop table Account;
-drop table Customer;
-drop table Branch;
-drop table Bank;
-
